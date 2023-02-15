@@ -12,9 +12,9 @@ const Header = () => {
           </Link>
         </div>
         <nav className="Nav">
-        <button><Link to="/characters">CHARACTERS</Link></button>
         <button><Link to="/comics">COMICS</Link></button>
-        <button><Link to="/favs">MY FAVS</Link></button>
+        <button><Link to="/characters">CHARACTERS</Link></button>
+        <button><Link to="/favs">FAVORITES</Link></button>
         </nav>
         <div className="Login">
           <button className="Logbutton">
