@@ -5,6 +5,7 @@ const Footer = () => {
           Made with <span>React</span> with <span>Le Reacteur</span> by{" "}
           <span>Priscil</span>{" "}
         </p>
+        
       </div>
     );
   };

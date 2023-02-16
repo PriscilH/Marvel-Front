@@ -71,3 +71,40 @@ a:link {
 /* a:visited {
     text-decoration: none;
   } */
+
+/* ---HOME--- */
+
+.Home{
+    align-items: center; 
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.2), 
+        rgba(0, 0, 0, 0.2)
+      ),  /*Applique un filtre noir sur l'image*/
+      url("./img/cover-home.jpeg");
+    height: 700px;
+    background-repeat: no-repeat;
+    display: flex;
+    background-size: cover;
+    justify-content: center;  
+}
+
+.Home h1{
+    font-size: 50px;
+    color: white;
+    text-shadow: 4px 4px red;
+}
+
+/* ---FOOTER--- */
+
+.Footer{
+    background-color: #202020;
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    height: 100px;
+    align-items: center;
+    font-size: 18px;
+}
+
+
