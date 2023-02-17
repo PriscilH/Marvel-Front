@@ -1,5 +1,6 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import { useState } from "react";
 
 // Import des composants
 import Header from "./components/Header";
@@ -14,6 +15,10 @@ import Comics from "./pages/Comics";
 import Favorites from "./pages/Favorites";
 
 function App() {
+  // const [title, setTitle] = useState("");
+
+  // const URL = "http://localhost:3001";
+  const URL = "https://site--backend-marvel--r85cyr9v9nmw.code.run";
   return (
     <Router>
       <Header/> 
@@ -21,7 +26,7 @@ function App() {
         <Route path="/" element={<Home />} />
         {/* <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} /> */}
-        <Route path="/comics" element={ <Comics />} />
+        <Route path="/comics" element={ <Comics URL={URL}/>} />
         <Route path="/characters" element={<Characters />} />
         <Route path="/favs" element={<Favorites />} />
       </Routes>
