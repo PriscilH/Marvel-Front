@@ -101,7 +101,7 @@ a:link {
   flex-wrap:wrap;
 } */
 
-.Contain-comics{
+.Contain-comics, .Contain-characters{
   display: flex;
   width: 80%;
   margin: 30px auto;
@@ -114,7 +114,7 @@ a:link {
   border: 1px solid red;
 }
 
-.Comics-list{
+.Comics-list {
   display: flex;
   justify-content: center;
   /* flex-wrap: wrap; */
@@ -125,13 +125,29 @@ a:link {
 }
 
 .Comics-list img {
+  display: flex;
   width: 250px;
   object-fit: cover;
   margin-right: 30px;
   border-radius: 5px;
 }
 
+/* ---CHARACTERS--- */
+.Characters-list{
+  box-sizing: border-box;
+  margin-left: 44px;
+}
 
+.Characters-list img{
+  display: flex;
+  margin: 31px;
+  border-radius: 5px;
+  border: 2px solid white;
+}
+
+.Characters-list p{
+  margin-left: 30px;
+}
 /* ---FOOTER--- */
 
 .Footer{
