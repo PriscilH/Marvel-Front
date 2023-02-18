@@ -122,6 +122,7 @@ a:link {
   margin-left: 40px;
   margin-top: 10px;
   margin-bottom: 50px;
+  border-bottom: 3px dashed red;
 }
 
 .Comics-list img {
@@ -130,24 +131,27 @@ a:link {
   object-fit: cover;
   margin-right: 30px;
   border-radius: 5px;
+  margin-bottom: 40px;
 }
+
+
 
 /* ---CHARACTERS--- */
-.Characters-list{
-  box-sizing: border-box;
-  margin-left: 44px;
-}
+
+.Contain-characters{
+    width: 80%;
+    margin: 3rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-gap:1rem;
+   
+  }
 
 .Characters-list img{
-  display: flex;
-  margin: 31px;
-  border-radius: 5px;
-  border: 2px solid white;
+   border: 2px solid white;
+   border-radius: 5px;
 }
 
-.Characters-list p{
-  margin-left: 30px;
-}
 /* ---FOOTER--- */
 
 .Footer{

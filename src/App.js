@@ -9,6 +9,7 @@ import Footer from "./components/Footer"
 // Import de pages
 import Home from "./pages/Home";
 import Characters from "./pages/Characters";
+import Character from "./pages/Character"; 
 // import Signup from "./pages/Signup";
 // import Login from "./pages/Login";
 import Comics from "./pages/Comics";
@@ -19,6 +20,7 @@ function App() {
 
   // const URL = "http://localhost:3001";
   const URL = "https://site--backend-marvel--r85cyr9v9nmw.code.run";
+
   return (
     <Router>
       <Header/> 
@@ -28,6 +30,7 @@ function App() {
         <Route path="/login" element={<Login />} /> */}
         <Route path="/comics" element={ <Comics URL={URL}/>} />
         <Route path="/characters" element={<Characters URL={URL} />} />
+        <Route path="/character" element={<Character URL={URL} />} />
         <Route path="/favs" element={<Favorites />} />
       </Routes>
       <Footer/>

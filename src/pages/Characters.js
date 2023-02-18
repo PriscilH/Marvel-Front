@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 const Characters = ({URL}) => {
@@ -27,6 +28,11 @@ const Characters = ({URL}) => {
       {data.results.map((characters, index) => {
         return (
             <div className="Characters-list"> 
+            <Link
+                  to="/character"
+                  onClick={() => window.scrollTo(0, 0)}
+                  state={{ id: characters._id }}
+                >
               <div><img
               src={
                 characters.thumbnail.path +
@@ -36,7 +42,8 @@ const Characters = ({URL}) => {
               alt="characters"
             /></div>
             <div><p>{characters.name}</p></div> 
-            </div>
+            <div><p>{characters.description && characters.description}</p></div> 
+            </Link></div>
         );
       })}
     </div>

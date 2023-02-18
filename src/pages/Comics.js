@@ -24,6 +24,7 @@ const Comics = ({URL}) => {
     <div className="Contain-comics">
       {data.results.map((comics, index) => {
         return (
+          
             <div className="Comics-list"> 
               <div className="comic-img"><img
               src={
@@ -35,7 +36,9 @@ const Comics = ({URL}) => {
             /></div>
             <div><p>{comics.title}</p></div>
            <div><p>{comics.description && comics.description}</p></div> 
+           
             </div>
+            
         );
       })}
     </div>
