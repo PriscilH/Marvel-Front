@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const Comics = () => {
+const Comics = ({URL}) => {
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const sizePicture = "/portrait_uncanny.";
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("https://site--backend-marvel--r85cyr9v9nmw.code.run/comics");
+        const response = await axios.get(`${URL}/comics`);
         /* console.log(response.data); */
         setData(response.data);
         setIsLoading(false);
@@ -17,7 +17,7 @@ const Comics = () => {
       }
     };
     fetchData();
-  }, []);
+  }, [URL]);
   return isLoading ? (
     <p>Loading ...</p>
   ) : (

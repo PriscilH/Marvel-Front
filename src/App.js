@@ -27,7 +27,7 @@ function App() {
         {/* <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} /> */}
         <Route path="/comics" element={ <Comics URL={URL}/>} />
-        <Route path="/characters" element={<Characters />} />
+        <Route path="/characters" element={<Characters URL={URL} />} />
         <Route path="/favs" element={<Favorites />} />
       </Routes>
       <Footer/>

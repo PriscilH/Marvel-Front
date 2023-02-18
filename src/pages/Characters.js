@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const Characters = () => {
+const Characters = ({URL}) => {
     const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const sizePicture = "/portrait_fantastic.";
@@ -10,7 +10,7 @@ const Characters = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("https://site--backend-marvel--r85cyr9v9nmw.code.run/characters");
+        const response = await axios.get(`${URL}/characters`);
         /* console.log(response.data); */
         setData(response.data);
         setIsLoading(false);
@@ -19,7 +19,7 @@ const Characters = () => {
       }
     };
     fetchData();
-  }, []);
+  }, [URL]);
   return isLoading ? (
     <p>Loading ...</p>
   ) : (
