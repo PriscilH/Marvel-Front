@@ -8,7 +8,7 @@ const Comics = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:3001/comics");
+        const response = await axios.get("https://site--backend-marvel--r85cyr9v9nmw.code.run/comics");
         /* console.log(response.data); */
         setData(response.data);
         setIsLoading(false);

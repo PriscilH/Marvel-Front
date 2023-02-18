@@ -5,10 +5,12 @@ const Characters = () => {
     const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const sizePicture = "/portrait_fantastic.";
+
+
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:3001/characters");
+        const response = await axios.get("https://site--backend-marvel--r85cyr9v9nmw.code.run/characters");
         /* console.log(response.data); */
         setData(response.data);
         setIsLoading(false);
