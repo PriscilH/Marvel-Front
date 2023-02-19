@@ -10,8 +10,6 @@ import Footer from "./components/Footer"
 import Home from "./pages/Home";
 import Characters from "./pages/Characters";
 import Character from "./pages/Character"; 
-// import Signup from "./pages/Signup";
-// import Login from "./pages/Login";
 import Comics from "./pages/Comics";
 import Favorites from "./pages/Favorites";
 
@@ -19,8 +17,8 @@ function App() {
   const [title, setTitle] = useState("");
   const [name, setName] = useState("");
 
-  const URL = "http://localhost:3001";
-  // const URL = "https://site--backend-marvel--r85cyr9v9nmw.code.run";
+  // const URL = "http://localhost:3001";
+  const URL = "https://site--backend-marvel--r85cyr9v9nmw.code.run";
 
   return (
     <Router>
