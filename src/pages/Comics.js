@@ -32,7 +32,7 @@ const Comics = ({URL, title, setTitle }) => {
   ) : (
     <div className="Contain-comics">
       <input
-            className="Searchcomics"
+            className="Searchbar"
             onChange={(event) => {
               setTitle(event.target.value);
             }}

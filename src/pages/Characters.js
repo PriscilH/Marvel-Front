@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import Loader from "../components/Loader";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Characters = ({URL, name, setName}) => {
     const [data, setData] = useState({});
@@ -33,7 +34,7 @@ const Characters = ({URL, name, setName}) => {
   ) : (
   <>
   <input
-            className="Searchchars"
+            className="Searchbar"
             onChange={(event) => {
               setName(event.target.value);
             }}

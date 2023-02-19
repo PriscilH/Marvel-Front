@@ -9,7 +9,7 @@ const Character = ({URL}) => {
     const [isLoading, setIsLoading] = useState(true);
     const location = useLocation();
     const { id } = location.state;
-//   const sizePicture = "/portrait_fantastic.";
+  const sizePicture = "/portrait_uncanny.";
 
 
   useEffect(() => {
@@ -31,7 +31,7 @@ const Character = ({URL}) => {
           <div className="character-id">
           <div className="portrait">
             <img
-              src={`${data.thumbnail.path}.${data.thumbnail.extension}`}
+              src={`${data.thumbnail.path}${sizePicture}${data.thumbnail.extension}`}
               alt=""
             />
           </div>
