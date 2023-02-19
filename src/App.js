@@ -30,7 +30,7 @@ function App() {
         <Route path="/characters" element={<Characters URL={URL} name={name}
         setName={setName}/>} />
         <Route path="/character" element={<Character URL={URL} />} />
-        <Route path="/favs" element={<Favorites URL={URL} />} />
+        <Route path="/favs" element={<Favorites  />} />
       </Routes>
       <Footer/>
     </Router>
