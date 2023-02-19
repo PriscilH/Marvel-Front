@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import Loader from "../components/Loader";
 
 const Characters = ({URL, name, setName}) => {
     const [data, setData] = useState({});
@@ -9,6 +10,9 @@ const Characters = ({URL, name, setName}) => {
 
 
   useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
     const fetchData = async () => {
       let filters = "";
       if (name) {
@@ -17,12 +21,11 @@ const Characters = ({URL, name, setName}) => {
         const response = await axios.get(`${URL}/characters${filters}`);
         /* console.log(response.data); */
         setData(response.data);
-        setIsLoading(false);
     };
     fetchData();
   }, [URL, name]);
   return isLoading ? (
-    <p>Loading ...</p>
+    <Loader/>
   ) : (
   <>
   <input

@@ -93,6 +93,25 @@ a:link {
     color: white;
     text-shadow: 4px 4px red;
 }
+/* ---LOADER--- */
+
+.Background{
+  background-color: #202020;
+  height: 950vh;
+}
+
+.Loader{
+  display: flex;
+  justify-content: center;
+}
+
+.Loader img{
+  height: 300px;
+  width: 450px;
+  border-radius: 100px;
+  margin-top: 200px;
+  border: 2px solid red;
+}
 
 /* ----COMICS---- */
 

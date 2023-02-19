@@ -1,12 +1,15 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Loader from "../components/Loader";
 
 const Comics = ({URL, title, setTitle}) => {
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
-  // const [search, setSearch] = useState("")
   const sizePicture = "/portrait_uncanny.";
   useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
     const fetchData = async () => {
         let filters = "";
       if (title) {
@@ -15,13 +18,12 @@ const Comics = ({URL, title, setTitle}) => {
         const response = await axios.get(`${URL}/comics${filters}`);
         /* console.log(response.data); */
         setData(response.data);
-        setIsLoading(false);
       
     };
     fetchData();
   }, [URL, title]);
   return isLoading ? (
-    <p>Loading ...</p>
+   <Loader/>
   ) : (
     <div className="Contain-comics">
       <input
