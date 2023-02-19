@@ -25,14 +25,12 @@ function App() {
       <Header/> 
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/signup" element={<Signup />} />
-        <Route path="/login" element={<Login />} /> */}
         <Route path="/comics" element={ <Comics URL={URL} title={title}
         setTitle={setTitle}/>} />
         <Route path="/characters" element={<Characters URL={URL} name={name}
         setName={setName}/>} />
         <Route path="/character" element={<Character URL={URL} />} />
-        <Route path="/favs" element={<Favorites />} />
+        <Route path="/favs" element={<Favorites URL={URL} />} />
       </Routes>
       <Footer/>
     </Router>
