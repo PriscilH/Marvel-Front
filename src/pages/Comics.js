@@ -2,26 +2,31 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Loader from "../components/Loader";
 
-const Comics = ({URL, title, setTitle}) => {
+const Comics = ({URL, title, setTitle }) => {
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
+  const [pages, setPages] = useState(1);
   const sizePicture = "/portrait_uncanny.";
+
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
     }, 3000);
     const fetchData = async () => {
         let filters = "";
+        if (pages > 1 && !title) {
+          filters = "?skip=" + (pages - 1) * 100; 
+        } else {
       if (title) {
         filters = filters + "?title=" + title;
-      }
+      }}
         const response = await axios.get(`${URL}/comics${filters}`);
         /* console.log(response.data); */
         setData(response.data);
-      
     };
     fetchData();
-  }, [URL, title]);
+  }, [URL, title, pages]);
+
   return isLoading ? (
    <Loader/>
   ) : (
@@ -54,6 +59,23 @@ const Comics = ({URL, title, setTitle}) => {
             
         );
       })}
+      <div className="pagination">
+        <button
+          className="page-button"
+          onClick={() => setPages(pages - 1)}
+          disabled={pages === 1}
+        >
+          -
+        </button>
+        <p className="page-number">Page {pages}</p>
+        <button
+          className="page-button"
+          onClick={() => setPages(pages + 1)}
+          disabled={data.length < 100}
+        >
+          +
+        </button>
+      </div>
     </div>
   );
 };

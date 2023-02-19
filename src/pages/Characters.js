@@ -6,6 +6,7 @@ import Loader from "../components/Loader";
 const Characters = ({URL, name, setName}) => {
     const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
+  const [pages, setPages] = useState(1);
   const sizePicture = "/portrait_fantastic.";
 
 
@@ -15,15 +16,18 @@ const Characters = ({URL, name, setName}) => {
     }, 3000);
     const fetchData = async () => {
       let filters = "";
+      if (pages > 1 && !name) {
+        filters = "?skip=" + (pages - 1) * 100; 
+      } else {
       if (name) {
         filters = filters + "?name=" + name;
-      }
+      }}
         const response = await axios.get(`${URL}/characters${filters}`);
         /* console.log(response.data); */
         setData(response.data);
     };
     fetchData();
-  }, [URL, name]);
+  }, [URL, name, pages]);
   return isLoading ? (
     <Loader/>
   ) : (
@@ -61,7 +65,26 @@ const Characters = ({URL, name, setName}) => {
             </Link></div>
         );
       })}
-    </div></>
+      <div className="pagination">
+        <button
+          className="page-button"
+          onClick={() => setPages(pages - 1)}
+          disabled={pages === 1}
+        >
+          -
+        </button>
+        <p className="page-number">Page {pages}</p>
+        <button
+          className="page-button"
+          onClick={() => setPages(pages + 1)}
+          disabled={data.length < 100}
+        >
+          +
+        </button>
+      </div>
+    </div>
+    
+    </>
   );
 };
 export default Characters;

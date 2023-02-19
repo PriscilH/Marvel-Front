@@ -2,33 +2,32 @@ import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import Loader from "../components/Loader";
 
 const Character = ({URL}) => {
     const [data, setData] = useState({});
-  const [isLoading, setIsLoading] = useState(true);
-  const location = useLocation();
-  const { id } = location.state;
+    const [isLoading, setIsLoading] = useState(true);
+    const location = useLocation();
+    const { id } = location.state;
 //   const sizePicture = "/portrait_fantastic.";
 
 
   useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
     const fetchData = async () => {
-      try {
         const response = await axios.get(`${URL}/comics/${id}`,
         { id: id, });
         /* console.log(response.data); */
-        setData(response.data);
-        setIsLoading(false);
-      } catch (error) {
-        console.log(error);
-      }
+        setData(response.data);  
     };
     fetchData();
   }, [URL, id]);
+
   return isLoading ? (
-    <p>Loading ...</p>
-  ) : (
-             
+    <Loader/>
+  ) : (  
           <div className="character-id">
           <div className="portrait">
             <img
@@ -37,7 +36,7 @@ const Character = ({URL}) => {
             />
           </div>
           <div className="header-scroll-text">
-          <p>Comics presence</p>
+          <p>Comics with {data.name}</p>
         </div>
 
         <div className="master-scrolling">
