@@ -7,21 +7,21 @@ const Header = () => {
     <header>
       <div className="Header">
         <div className="Authentification">
-        <Link to="/user/login"/> 
+        <Link to="/user/login"> 
         <button className="Signbutton">
             SIGN IN | JOIN
         </button>
-        <Link/>
+        </Link>
         <div className="Logo">
           <Link to="/">
             <img src={Logo} alt="Logo Marvel" />
           </Link>
         </div>
-        <Link to="/user/signup"/> 
+        <Link to="/user/signup"> 
         <button className="Subbutton">
             MARVEL UNLIMITTED SUBSCRIBE
           </button>
-        <Link/>
+        </Link>
         </div>
         <div className="Trait"></div>
         <nav className="Nav">
