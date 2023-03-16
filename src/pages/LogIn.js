@@ -36,6 +36,7 @@ const LogIn = ({ setUser, URL }) => {
   return (
     <div className="container-log">
       <form className="login-form" onSubmit={handleSubmit}>
+      <h4>CONNEXION</h4>
         <div className="email">
           {/* {" "} */}
           <label htmlFor="email">Email :</label>
@@ -60,7 +61,7 @@ const LogIn = ({ setUser, URL }) => {
           />
         </div>
 
-        <button type="submit">Login</button>
+        <button className="Logbutton" type="submit">Se connecter</button>
         {errorMessage && <p>{errorMessage}</p>}
       </form>
     </div>
