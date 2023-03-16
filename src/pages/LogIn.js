@@ -34,7 +34,8 @@ const LogIn = ({ setUser, URL }) => {
   };
 
   return (
-    <div className="container-log">
+    <div className="bgr">
+ <div className="container-log">
       <form className="login-form" onSubmit={handleSubmit}>
       <h4>CONNEXION</h4>
         <div className="email">
@@ -65,6 +66,8 @@ const LogIn = ({ setUser, URL }) => {
         {errorMessage && <p>{errorMessage}</p>}
       </form>
     </div>
+    </div>
+   
   );
 };
 

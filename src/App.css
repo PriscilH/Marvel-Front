@@ -115,9 +115,11 @@ a:link {
   border-radius: 20px;
   border: 2px solid red;
 }
-
+.bgr{
+  background-image: url("../src/img/wallpaper-comics.webp");
+  margin-right: 20px;
+}
 .login-form {
-  /* margin-top: 20px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -126,14 +128,10 @@ a:link {
 .container-log, form{
   display: flex;
   justify-content: center;
-  /* flex-direction: column; */
   align-items: center;
   background-color: #202020;
   width: max-content;
   padding: 45px;
-  
-  /* margin-top: 200px; */
-  /* height: max-content; */
 }
 form h4{
   padding-bottom: 50px;
@@ -142,7 +140,6 @@ form h4{
   text-shadow: red 2px 5px;;
 }
 .email{
-  /* margin-top: 20px; */
   margin-left: 30px;
   margin-bottom: 20px;
 }
@@ -170,6 +167,9 @@ form h4{
     font-weight: bold;
     border: 1px solid red;
     text-shadow: red 2px 5px;
+}
+.Logbutton:hover{
+  cursor: pointer;
 }
 
 /* ----COMICS---- */
