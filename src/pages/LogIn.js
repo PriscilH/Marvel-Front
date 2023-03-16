@@ -34,29 +34,29 @@ const LogIn = ({ setUser, URL }) => {
   };
 
   return (
-    <div className="container">
+    <div className="container-log">
       <form className="login-form" onSubmit={handleSubmit}>
-        <div>
-          {" "}
-          <label htmlFor="email">Enter your email</label>
+        <div className="email">
+          {/* {" "} */}
+          <label htmlFor="email">Email :</label>
           <input
             type="email"
-            placeholder="Votre email"
+            placeholder="Enter your email"
             id="email"
             onChange={(event) => {
               setEmail(event.target.value);
-            }}
+            }} 
           />
         </div>
-        <div>
-          <label htmlFor="password">Enter your password</label>
+        <div className="password">
+          <label htmlFor="password">Password :</label>
           <input
             type="password"
-            placeholder="Votre mot de passe"
+            placeholder="Enter your password"
             id="password"
             onChange={(event) => {
               setPassword(event.target.value);
-            }}
+            }} 
           />
         </div>
 
