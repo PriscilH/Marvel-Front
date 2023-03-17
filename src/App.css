@@ -1,3 +1,7 @@
+body{
+  background-image: url(../src/img/perso.jpg); 
+}
+
 /* ---HEADER--- */
 
 .Header{
@@ -184,18 +188,13 @@ form h4{
 .Logbutton:hover{
   cursor: pointer;
 }
-body{
-  background-image: url(../src/img/perso.jpg); 
-}
 
 .container-sign{
   margin-top: 40px;
   margin-left: 530px;
   border-radius: 20px;
-  /* background-image: url(../src/img/perso.jpg); */
   background-size: contain;
   background-position: center;
-  /* box-sizing: border-box; */
 }
 
 .banner{

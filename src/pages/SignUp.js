@@ -47,7 +47,6 @@ const SignUp = ({ setUser, URL }) => {
   return (
     <div>
 <div className="container-sign">
-      {/* <h4>Inscrit toi !</h4> */}
       <form onSubmit={handleSubmit} className="sign-form">
         <div className="username">
           <label htmlFor="username">Username :</label>
