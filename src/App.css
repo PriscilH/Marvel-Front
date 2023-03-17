@@ -389,7 +389,7 @@ form h4{
     display: flex;
     justify-content: center;
     font-weight: bold;
-    height: 100px;
+    height: 200px;
     align-items: center;
     font-size: 18px;
     bottom: 0;
@@ -397,4 +397,15 @@ form h4{
     width: 100%;
 }
 
+.Footer img{
+  height: 115px;
+  width: 95px;
+  margin-left: -115px;
+  margin-right: 105px;
+}
 
+.Block1, .Block2{
+  margin-right: 105px;
+  font-size: 13px;
+  line-height: 16.9px;
+}
