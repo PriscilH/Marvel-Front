@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Followfav from "../img/follow-favorites.jpg"
 
 const SignUp = ({ setUser, URL }) => {
   const [username, setUsername] = useState("");
@@ -44,11 +45,12 @@ const SignUp = ({ setUser, URL }) => {
   };
 
   return (
-    <div className="container">
-      <h4>A few informations about yourself</h4>
-      <form onSubmit={handleSubmit} className="signup-form">
-        <div>
-          <label htmlFor="username">Choose your username</label>
+    <div>
+<div className="container-sign">
+      {/* <h4>Inscrit toi !</h4> */}
+      <form onSubmit={handleSubmit} className="sign-form">
+        <div className="username">
+          <label htmlFor="username">Username :</label>
           <input
             type="text"
             placeholder="Username"
@@ -60,9 +62,8 @@ const SignUp = ({ setUser, URL }) => {
             }}
           />
         </div>
-        <div>
-          <label htmlFor="email">Enter your email address</label>
-
+        <div className="email">
+          <label htmlFor="email">Email :</label>
           <input
             type="email"
             placeholder="Your email"
@@ -74,12 +75,11 @@ const SignUp = ({ setUser, URL }) => {
             }}
           />
         </div>
-        <div>
-          <label htmlFor="password">Choose a password</label>
-
+        <div className="password">
+          <label htmlFor="password">Password :</label>
           <input
             type="password"
-            placeholder="Your password"
+            placeholder="Choose your password"
             id="password"
             name="password"
             value={password}
@@ -89,10 +89,15 @@ const SignUp = ({ setUser, URL }) => {
           />
         </div>
 
-        <button type="submit">Sign up</button>
+        <button className="Logbutton" type="submit">Sign up</button>
         {errorMessage && <p>{errorMessage}</p>}
       </form>
     </div>
+    <img className="banner"  alt="banner" src={Followfav}/>
+    </div>
+
+    
+    
   );
 };
 
