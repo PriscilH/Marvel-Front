@@ -66,6 +66,7 @@ const LogIn = ({ setUser, URL }) => {
         {errorMessage && <p>{errorMessage}</p>}
       </form>
     </div>
+    <div className="hide"></div>
     </div>
    
   );
