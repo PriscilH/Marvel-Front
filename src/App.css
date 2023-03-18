@@ -275,8 +275,8 @@ form h4{
 
 /* ---PAGE-CHARACTER--- */
 .character-id {
-  background-color:rgba(0, 0, 0, 0.5
-  );
+  /* background-color:rgba(0, 0, 0, 0.5
+  ); */
   padding-top: 20px;
   min-height: 100vh;
 }
@@ -295,14 +295,24 @@ form h4{
 }
 
 .header-scroll-text {
-  margin-top: 10px;
+  margin-top: 30px;
   display: flex;
   justify-content: center;
   font-size: 25px;
-  font-family:Arial, Helvetica, sans-serif;
+  /* font-family:Arial, Helvetica, sans-serif; */
   margin-bottom: 20px;
   font-weight: bold;
+  background-color: #202020;
+  color: white;
+  width: 300px;
+  border-radius: 20px;
+  border: 2px solid red;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 20px;
 }
+
+
 .master-scrolling {
   display: flex;
   justify-content: center;
@@ -313,7 +323,7 @@ form h4{
   display: flex;
   box-shadow: 1px 1px 10px 1px rgba(70, 70, 70, 0.223);
   flex-wrap: nowrap;
-  overflow: hidden;
+  /* overflow: hidden; */
   list-style: none;
   margin: 0;
   gap: 30px;
@@ -323,8 +333,8 @@ form h4{
   border-radius: 10px;
   overflow-x: scroll;
   margin-bottom: 55px;
+  background-color: #202020;
 }
-
 
 .comics-fit-scroll img {
   height: 210px;
@@ -338,11 +348,28 @@ form h4{
   font-size: 11px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: white;
 }
 
-.button-back {
-  color: black;
+.btn {
+  display: inline-block;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 14px 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #ED1D24;
+  box-shadow: 0 2px 0 0 #BE1C1F;
   cursor: pointer;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.btn:hover {
+  background-color: #BE1C1F;
 }
 
 /* ---Searchbar--- */

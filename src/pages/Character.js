@@ -67,7 +67,9 @@ const Character = ({URL}) => {
           </div>
         </div>
             <Link to="/characters">
-            <button className="button-back">RETOUR</button>
+            <button className="btn">
+              RETOUR
+              </button>
           </Link>
         </div>
        
