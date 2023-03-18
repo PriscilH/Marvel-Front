@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import Loader from "../components/Loader";
+import {VerticleButton as ScrollUpButton} from "react-scroll-up-button";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Characters = ({URL, name, setName}) => {
@@ -82,6 +83,9 @@ const Characters = ({URL, name, setName}) => {
         >
           +
         </button>
+      </div>
+      <div>
+        <ScrollUpButton />
       </div>
     </div>
     

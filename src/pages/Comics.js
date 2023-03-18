@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Loader from "../components/Loader";
+import {VerticleButton as ScrollUpButton} from "react-scroll-up-button";
 
 const Comics = ({URL, title, setTitle }) => {
   const [data, setData] = useState({});
@@ -75,6 +76,9 @@ const Comics = ({URL, title, setTitle }) => {
         >
           +
         </button>
+      </div>
+      <div>
+        <ScrollUpButton />
       </div>
     </div>
   );
