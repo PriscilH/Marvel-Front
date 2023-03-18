@@ -37,7 +37,7 @@ const LogIn = ({ setUser, URL }) => {
     <div className="bgr">
  <div className="container-log">
       <form className="login-form" onSubmit={handleSubmit}>
-      <h4>CONNEXION</h4>
+      <h4>CONNECTION</h4>
         <div className="email">
           {/* {" "} */}
           <label htmlFor="email">Email :</label>
@@ -62,7 +62,7 @@ const LogIn = ({ setUser, URL }) => {
           />
         </div>
 
-        <button className="Logbutton" type="submit">Se connecter</button>
+        <button className="Logbutton" type="submit">Sign In</button>
         {errorMessage && <p>{errorMessage}</p>}
       </form>
     </div>
