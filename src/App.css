@@ -446,3 +446,34 @@ form h4{
   font-size: 13px;
   line-height: 16.9px;
 }
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1088px) {
+.Logo img{
+margin-right: 250px;
+margin-left: 250px;
+}
+}
+
+@media (max-width: 959px) {
+.Logo img{
+margin-right: 150px;
+margin-left: 150px;
+}
+
+.Banner-block h1{
+ margin-left: 100px;
+}
+}
+
+@media (max-width: 749px) {
+.Logo img{
+margin-right: 50px;
+margin-left: 50px;
+}
+
+.Banner-block h1{
+ margin-left: 60px;
+}
+}
