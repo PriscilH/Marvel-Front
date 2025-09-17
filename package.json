@@ -18,6 +18,9 @@
     "react-scroll-up-button": "^1.6.4",
     "web-vitals": "^2.1.0"
   },
+  "resolutions": {
+    "form-data": "^4.0.4"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
